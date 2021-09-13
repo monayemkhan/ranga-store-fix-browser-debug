@@ -3,8 +3,6 @@ const loadProducts = () => {
   showProducts(data);
 };
 
-
-
 // show all product in UI 
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
@@ -16,12 +14,12 @@ const showProducts = (products) => {
       <div>
         <img class="product-image" src=${product?.image}></img>
       </div>
-      <h3>${product.title}</h3>
+      <h4 class="fs-5 mt-3 fw-bolder">${product.title}</h4>
       <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <p>Avg. Rating: ${product?.rating?.rate} , People rated: ${product?.rating?.count} </p>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button></div>
+      <h3 class="fs-4">Price: $ ${product.price}</h3>
+      <p><small>Avg. Rating: ${product?.rating?.rate}  People rated: ${product?.rating?.count}</small></p>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-outline-success">add to cart</button>
+      <button id="details-btn" class="btn btn-outline-danger">Details</button></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }

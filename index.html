@@ -5,12 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>Royals Store</title>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,28 +16,41 @@
 </head>
 
 <body>
-  <header></header>
+  <!-- header section -->
+  <header>
+    <div class="text-center mt-3">
+      <h2 class="fw-bold">Royals Online Store</h2>
+    </div>
+  </header>
+
+  <!-- main secton -->
   <main class="main">
+    <!-- search section -->
     <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text"/>
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+      <div class="search-box d-flex justify-content-center">
+        <input id="input-field" class="input-field" type="text"/>
+        <button type="button" class="btn btn-outline-success search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
         </button>
       </div>
     </div>
+
+    <!-- product item section -->
     <div class="row">
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">
-          <!-- <h1></h1> -->
+
         </div>
       </div>
+
+      <!-- cart or buy section -->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
+          <!-- create a cart table -->
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
+              <h2>My-Cart</h2>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
@@ -79,17 +90,22 @@
               </tr>
             </tbody>
           </table>
+
+          <!-- create a cart button -->
           <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+            <button class="btn btn-outline-primary text-center">Buy Now</button>
           </div>
         </div>
       </div>
     </div>
   </main>
+
+  <!-- footer section -->
   <footer></footer>
 
   <!-- add javascript  file  -->
   <script src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
