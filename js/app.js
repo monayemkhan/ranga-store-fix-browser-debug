@@ -7,19 +7,20 @@ const loadProducts = () => {
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
-    const image = product.images;
+    const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
-      <div>
-        <img class="product-image" src=${product?.image}></img>
+      <div class="images">
+        <img class="product-image" src=${image}></img>
       </div>
-      <h4 class="fs-5 mt-3 fw-bolder">${product.title}</h4>
+      <h3 class="fs-5 mt-3 fw-bold">${product.title}</h3>
       <p>Category: ${product.category}</p>
-      <h3 class="fs-4">Price: $ ${product.price}</h3>
-      <p><small>Avg. Rating: ${product?.rating?.rate}  People rated: ${product?.rating?.count}</small></p>
+      <h3 class="fs-4 text-danger">Price: $ ${product.price}</h3>
+      <p class="text-warning"><small><i class="far fa-star"></i> ${product?.rating?.rate}/5 / <i class="far fa-user"></i> ${product?.rating?.count}</small></p>
+      <div class="single-product-button">
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-outline-success">add to cart</button>
-      <button id="details-btn" class="btn btn-outline-danger">Details</button></div>
+      <button id="details-btn" class="btn btn-outline-danger">Details</button></div></div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
